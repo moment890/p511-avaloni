@@ -6,16 +6,13 @@
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="p511_890.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
+        Background="White"
         Icon="/Assets/avalonia-logo.ico"
         Title="p511_890">
-
-   
-    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-        <Button Name="click" Click="handleClick" Content="click" />
-        <Button Name="lol" Click="handleClick" Content="lol" />
+ <Border BorderThickness="3" Padding="30" CornerRadius="12" BorderBrush="LightGray" VerticalAlignment="Center" HorizontalAlignment="Center">
+      <StackPanel>
+          <Image MaxWidth="70" MaxHeight="70" Source="C:\Users\User\source\repos\p511-890\Assets\phone.png"/>
+            <TextBlock Padding="10,0,10,0" Foreground="Black" FontWeight="Bold" FontSize="24">phones</TextBlock>
         </StackPanel>
-    
-    
-    
-
+    </Border>
 </Window>

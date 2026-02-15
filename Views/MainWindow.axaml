@@ -1,0 +1,21 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:p511_890.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="p511_890.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="p511_890">
+
+   
+    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+        <Button Name="click" Click="handleClick" Content="click" />
+        <Button Name="lol" Click="handleClick" Content="lol" />
+        </StackPanel>
+    
+    
+    
+
+</Window>

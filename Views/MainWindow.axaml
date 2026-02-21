@@ -6,13 +6,27 @@
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="p511_890.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
-        Background="White"
         Icon="/Assets/avalonia-logo.ico"
         Title="p511_890">
- <Border BorderThickness="3" Padding="30" CornerRadius="12" BorderBrush="LightGray" VerticalAlignment="Center" HorizontalAlignment="Center">
-      <StackPanel>
-          <Image MaxWidth="70" MaxHeight="70" Source="C:\Users\User\source\repos\p511-890\Assets\phone.png"/>
-            <TextBlock Padding="10,0,10,0" Foreground="Black" FontWeight="Bold" FontSize="24">phones</TextBlock>
-        </StackPanel>
-    </Border>
+ <StackPanel>
+      <TextBlock Margin="5" FontSize="24" HorizontalAlignment="Center" Text="Temperature Converter" />
+
+     <Grid
+      HorizontalAlignment="Center"
+      Margin="5" 
+      ColumnDefinitions="100, 100" 
+      RowDefinitions="Auto, Auto">
+
+    <TextBlock Grid.Row="0" Grid.Column="0" Margin="10">Celsius</TextBlock>
+    <TextBox Grid.Row="0" Grid.Column="1" Margin="0 5" Text="0" Name="Celsius"/>
+    <TextBlock Grid.Row="1" Grid.Column="0" Margin="10">Fahrenheit</TextBlock>
+    <TextBox Grid.Row="1" Grid.Column="1" Margin="0 5" Text="0" Name="Fahrenheit"/>
+
+</Grid>
+
+	  <Button HorizontalAlignment="Center" Click="Button_OnClick" >Caiculate</Button>
+ </StackPanel>
+   
+  
+
 </Window>

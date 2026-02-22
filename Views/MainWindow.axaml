@@ -3,33 +3,55 @@
         xmlns:vm="using:p511_890.ViewModels"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        
         x:Class="p511_890.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
         Width="400"
         Height="450"
         Icon="/Assets/avalonia-logo.ico"
         Title="p511_890">
-        
- <StackPanel>
-      <TextBlock Margin="5" FontSize="24" HorizontalAlignment="Center" Text="Temperature Converter" />
 
-     <Grid
-      HorizontalAlignment="Center"
-      Margin="5" 
-      ColumnDefinitions="100, 100" 
-      RowDefinitions="Auto, Auto">
-
-    <TextBlock Grid.Row="0" Grid.Column="0" Margin="10">Celsius</TextBlock>
-    <TextBox Grid.Row="0" Grid.Column="1" Margin="0 5" Text="0" TextChanged="Celsius_TextChanged" Name="Celsius"/>
-    <TextBlock Grid.Row="1" Grid.Column="0" Margin="10">Fahrenheit</TextBlock>
-    <TextBox Grid.Row="1" Grid.Column="1" Margin="0 5" Text="0" Name="Fahrenheit" IsReadOnly="True"/>
-
-</Grid>
-
-	 <Button HorizontalAlignment="Center" Click="Button_OnClick" >Caiculate</Button>
- </StackPanel>
-   
   
+
+    <DockPanel LastChildFill="True">
+        
+        <TextBlock DockPanel.Dock="Top" Margin="10" FontSize="24" HorizontalAlignment="Center">Calculator</TextBlock>
+        
+        
+        <Grid Margin="10">
+           
+            <TextBox x:Name="Display" Text="" IsReadOnly="True" VerticalContentAlignment="Bottom" HorizontalContentAlignment="Stretch" FontSize="28" Margin="10" Foreground="White" BorderBrush="Gray" BorderThickness="4" Padding="5" TextWrapping="Wrap" AcceptsReturn="False" TextAlignment="Right"/>
+            
+            
+            <UniformGrid Rows="5" Columns="4" Margin="15">
+                
+                <Button Content="7" Click="Number_Click"/>
+                <Button Content="8" Click="Number_Click"/>
+                <Button Content="9" Click="Number_Click"/>
+                <Button Content="/" Click="Operation_Click"/> 
+                
+               
+                <Button Content="4" Click="Number_Click"/>
+                <Button Content="5" Click="Number_Click"/>
+                <Button Content="6" Click="Number_Click"/>
+                <Button Content="*" Click="Operation_Click"/> 
+                
+                
+                <Button Content="1" Click="Number_Click"/>
+                <Button Content="2" Click="Number_Click"/>
+                <Button Content="3" Click="Number_Click"/>
+                <Button Content="-" Click="Operation_Click"/> 
+                
+                
+                <Button Content="." Click="Number_Click"/> 
+                <Button Content="0" Click="Number_Click"/>
+                <Button Content="=" Click="Calculate_Click"/> 
+                <Button Content="+" Click="Operation_Click"/> 
+                
+                
+                <Button Content="AC" Click="Clear_Click"/> 
+            </UniformGrid>
+        </Grid>
+    </DockPanel>
 
 </Window>
